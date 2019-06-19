@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Report</title>
+      <link rel="stylesheet" type="text/css" href="custom.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+               <h2>
+                  Generate report for the following months:
+               </h2>
+               <div class="row">
+                  <div class="col-md-4 months">
+                     <button class="btn" id="34">March - April</button>
+                  </div>
+                  <div class="col-md-4 months">
+                     <button class="btn" id="45">April - May</button>
+                  </div>
+                  <div class="col-md-4 months">
+                     <button class="btn" id="56">May - June</button>
+                  </div>
+                  <div class="col-md-4 months">
+                     <button class="btn" id="67">June - July</button>
+                  </div>
+                  <div class="col-md-4 months">
+                     <button class="btn" id="78">July - August</button>
+                  </div>
+                  <div class="col-md-4 months">
+                     <button class="btn" id="89">August - September</button>
+                  </div>
+                  <div class="col-md-4 months">
+                     <button class="btn months-btn" id="910"/>September - October</button>
+                  </div>
+                  <div class="col-md-4 months">
+                     <button class="btn months-btn" id="1011"/>October - November</button>
+                  </div>
+                  <div class="col-md-4 months">
+                      <button class="btn months-btn " id="1112"/>November - December</button>
+                  </div>
+               </div>
+            </div>
+            <hr>
+         </div>
+      <div class="loader">
+         <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+               <div class="text-center top-distance">
+                  <img src="https://www.drupal.org/files/issues/throbber_12.gif" class="rounded" width="200">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="content">
+         <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+               <div class="text-center top-distance">
+                  <img src="https://www.crunchrapps.com/hubfs/Crunchr/logo-1.svg" class="rounded" width="200">
+               </div>
+               <hr>
+
+
+               <h1 class="text-center">Report on Remarkable Changes in Employees' Data for <span class="period">November - December</span></h1>
+               <br>
+
+               <div class="contents">
+                  <div class="section">
+                     <div class="underlined">
+                        <h3> Summary </h3>
+                     </div>
+                     <p class="report-txt"> The aim of this report is to extract and explain changes for the employees in the company of ASR (<a href="https://www.asrnederland.nl/">www.asrnederland.nl</a>) when comparing data for two months (<span class="period">November - December</span>). 
+
+                  </div>
+                  <div class="section">
+                     <div class="underlined">
+                        <h3> Terms </h3>
+                     </div>
+                     <div class="term">
+                        An <b> attribute </b> (also known as feature) is a property that is shared among different objects. In this report, an attribute is a property that is shared among employees. There are different types of attributes - numerical and categorical. <br>
+                     </div>
+                     <ul> 
+                     <li class="term move">
+                        A <b> numerical attribute </b> is the one that can take any numeric value. Example of numerical   values are base salary, relative salary position and etc. 
+                     </li>
+                   
+                     <li class="term move">
+                        A <b> categorical attribute </b> is the one that can take on fixed number of possible values. The categorical attributes are also classified as nominal and ordinal. 
+                        <ul> 
+                           <li> An <b> ordinal attribute </b> is an attribute in which there is a clear ranking of values (e.g. employee_grade). A <b> step </b> in ordinal attributes is a number that describes the transition in the attribute. For example, the attribute performance_status has values low, medium, high. If the performance status of employee changes from low to medium, the step is 1. If it changes from low to high, the step is 2. </li> 
+                           <li> A <b> nominal attribute </b> is an attribute that is used to label objects (e.g. title, business unit) </li>.
+                        </ul>
+                     </li>
+                     </ul>
+                     <div class="term">
+                        An <b> extreme value </b> (also known as an outlier) is a value that is very different from the others. In this report, an <b> extreme value for numerical attributes </b> is every value that is either very low or very high compared to the others. An <b>
+                        extreme value for categorical attributes </b> is every value in which there are a few overall frequencies. For example, an employee that has title CEO is an extreme value because there are just a few people that have the same title. 
+                     </div>
+                     <div class="term">
+                         A <b> change </b> is every alteration of values when comparing data from two time periods. In this report, when comparing data for <span class="period">November - December. After detecting the changes, we use the values from the second month and identify if the values are extreme, interesting or normal.</span>. 
+                     </div>
+                     <div class="">
+                        A <b> remarkable change </b> is considered: 
+                         <ul>
+                           <li>Every employee with extreme values in multiple attributes </li>
+                           <li>Every employee with extime value in one attribute </li>
+                           <li>Every employee with changes that exceed certain threshold </li>
+                        </ul>
+                     </div>
+                     <div class="term">
+                        A <b> measure of association </b> is a measure that shows how well two attributes are related. It has a value between 0 and 1, where 0 shows that the attributes are not related at all and 1 shows that the attributes are perfectly related. Perfectly related means that there is a relationship between the attributes and the change in one of the attributes might have influence on the other.
+                     </div>
+                     <div class="section">
+                        <div class="underlined">
+                           <h3> Report Structure </h3>
+                        </div>
+                        <div class="rep-structure">
+                           <b class="part"> Part I </b> shows all of the changes that took place for the period of <span class="period">November - December</span>. <br> <br>
+
+                           <b class="part"> Part II </b> shows all of the employees that have <b> extreme changes </b> for the period of <span class="period">November - December</span>. <br> <br>
+
+                           <b class="part"> Part III </b> shows all of the employees that have <b> changes that exceed certain threshold </b>  for the period of <span class="period">November - December</span>. <br> <br>
+
+                        </div>
+                        
+                     </div>
+
+                  </div>
+               </div>
+               </div>
+            </div>
+<div class="row">
+      <div class="container load-stuff">
+      <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+         <div class="underlined">
+            <h3> Part I </h3>
+         </div>
+         <div class="alert alert-success">
+            <p class="normal-txt"> There have been changes for <span class="changesnumber" id="changes-number"></span> employees.</p>
+         </div>
+         <div class="table-wrap аll-changes">
+           
+         </div>
+         <div class="alert alert-warning">
+            <p class="normal-txt"> There have been at least two changes for <span id="two-changes-number"></span> employees.</p>
+         </div>
+         <div class="underlined">
+            <h3> Part II  </h3>
+         </div>
+
+         <div class="multiple-outliers-employee" id="multiple-outliers-employee">
+                 
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="alert alert-success">
+                  <p class="normal-txt"> There have been <span class="single-outliers">0</span> employees with an extreme value in one attribute.</p>
+               </div>
+               <!-- <p> Click on Employee ID to explore the changes in fields for this employee for the past 12 months </p> -->
+               <div class="single-outlierz row">
+
+               </div>
+<!--                <div class="alert alert-danger">
+                  <p> The reasons are ranked according to the estimated measure of association with the outlying attribute. </p>
+               </div> -->
+            </div>
+         </div>
+         <div class="row">
+         	<div class="col-md-12">
+               <div class="underlined">
+                  <h3> Part III</h3>
+               </div>
+               <div class="changes-numeric">
+               <p>As it is mentioned in the terms section, in this report, a remarkable change is also considered every employee with changes that exceed certain threshold. The threshold, in this report, is based on 2 metrics – percentage change and percentage difference to the average change in the attribute. </p>
+               <p> <b>Remarkable changes for numerical data </b> are considered the one in which  percentage change or percentage difference to the average change is more than 50%.</p>               <div class="alert alert-success">
+                   <p class="normal-txt"> There have been <span class="int-changes">0</span> employees with interesting changes.</p>
+               </div>
+                  <div class="row numeric-changes">
+        
+                </div>  
+             </div>
+             </div>
+               
+           	</div>
+         </div>
+         <div>
+
+		</div>
+      </div>
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLabel">All information about the Employee with <span class="employee-id-moral"></span> for 2018</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+         </div>
+         </div>
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="./data/03-04/all-changes.js"></script>
+      <script src="./data/03-04/multiple-outliers.js"></script>
+      <script src="./data/03-04/single-outliers.js"></script>
+      <script src="./data/03-04/only-interesting-changes.js"></script>
+      <script src="./data/03-04/people.js"></script>
+
+      <script src="./data/04-05/all-changes.js"></script>
+      <script src="./data/04-05/multiple-outliers.js"></script>
+      <script src="./data/04-05/single-outliers.js"></script>
+      <script src="./data/04-05/only-interesting-changes.js"></script>
+      <script src="./data/04-05/people.js"></script>
+
+      <script src="./data/05-06/all-changes.js"></script>
+      <script src="./data/05-06/multiple-outliers.js"></script>
+      <script src="./data/05-06/single-outliers.js"></script>
+      <script src="./data/05-06/only-interesting-changes.js"></script>
+      <script src="./data/05-06/people.js"></script>
+
+      <script src="./data/06-07/all-changes.js"></script>
+      <script src="./data/06-07/multiple-outliers.js"></script>
+      <script src="./data/06-07/single-outliers.js"></script>
+      <script src="./data/06-07/only-interesting-changes.js"></script>
+      <script src="./data/06-07/people.js"></script>
+
+      <script src="./data/07-08/all-changes.js"></script>
+      <script src="./data/07-08/multiple-outliers.js"></script>
+      <script src="./data/07-08/single-outliers.js"></script>
+      <script src="./data/07-08/only-interesting-changes.js"></script>
+      <script src="./data/07-08/people.js"></script>
+
+      <script src="./data/08-09/all-changes.js"></script>
+      <script src="./data/08-09/multiple-outliers.js"></script>
+      <script src="./data/08-09/single-outliers.js"></script>
+      <script src="./data/08-09/only-interesting-changes.js"></script>
+      <script src="./data/08-09/people.js"></script>
+
+      <script src="./data/09-10/all-changes.js"></script>
+      <script src="./data/09-10/multiple-outliers.js"></script>
+      <script src="./data/09-10/single-outliers.js"></script>
+      <script src="./data/09-10/only-interesting-changes.js"></script>
+      <script src="./data/09-10/people.js"></script>
+
+      <script src="./data/10-11/all-changes.js"></script>
+      <script src="./data/10-11/multiple-outliers.js"></script>
+      <script src="./data/10-11/single-outliers.js"></script>
+      <script src="./data/10-11/only-interesting-changes.js"></script>
+      <script src="./data/10-11/people.js"></script>
+
+
+      <script src="./data/11-12/all-changes.js"></script>
+      <script src="./data/11-12/multiple-outliers.js"></script>
+      <script src="./data/11-12/single-outliers.js"></script>
+      <script src="./data/11-12/only-interesting-changes.js"></script>
+      <script src="./data/11-12/people.js"></script>
+
+      <script src="scripts.js"></script>
+
+   </body>
+</html>
